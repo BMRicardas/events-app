@@ -1,3 +1,4 @@
+import { CheckoutButton } from "@/components/shared/checkout-button";
 import { Collection } from "@/components/shared/collection";
 import {
   getEventById,
@@ -11,7 +12,7 @@ export default async function EventDetails({
   params: { id },
   searchParams,
 }: SearchParamProps) {
-  const event: Event = await getEventById(id);
+  const event = await getEventById(id);
 
   const relatedEvents = await getRelatedEventsByCategory({
     categoryId: event.category._id,
@@ -58,7 +59,7 @@ export default async function EventDetails({
               </div>
             </div>
 
-            {/* <CheckoutButton event={event} /> */}
+            <CheckoutButton event={event} />
 
             <div className="flex flex-col gap-5">
               <div className="flex gap-2 md:gap-3">
