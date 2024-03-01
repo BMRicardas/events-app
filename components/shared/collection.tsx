@@ -21,7 +21,7 @@ export function Collection({
   emptyStateSubtext,
   limit,
   page,
-  totalPages,
+  totalPages = 0,
   urlParamName,
   collectionType,
 }: Props) {

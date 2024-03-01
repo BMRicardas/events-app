@@ -7,7 +7,7 @@ import { formUrlQuery } from "@/lib/utils";
 interface Props {
   page: number | string;
   totalPages: number;
-  urlParamName: string;
+  urlParamName?: string;
 }
 
 export function Pagination({ page, totalPages, urlParamName }: Props) {
