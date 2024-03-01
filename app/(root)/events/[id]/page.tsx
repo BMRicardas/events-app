@@ -8,6 +8,7 @@ import { formatDateTime } from "@/lib/utils";
 import { Event, SearchParamProps } from "@/types";
 import Image from "next/image";
 
+// TODO find better type for props. Maybe Next native types?
 export default async function EventDetails({
   params: { id },
   searchParams,
